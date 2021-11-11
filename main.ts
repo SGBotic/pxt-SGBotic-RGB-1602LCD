@@ -197,14 +197,14 @@ namespace sgbotic {
     }
 
     /**
-     * Set backlight color
+     * Set color
      */
     //% subcategory=RGB-1602LCD
     //% group="core"
-    //% blockId="backlightColor" block="backlight |%rgbVal"
+    //% blockId="colourPicker" block="colour |%rgbVal"
     //% rgbVal.shadow="colorNumberPicker"
     //% weight=92 blockGap=20 color=#5DADE2
-    export function backlightColor(rgbVal: number): void {
+    export function colourPicker(rgbVal: number): void {
         let r = (rgbVal >> 16)
         let g = ((rgbVal >> 8) & 0xFF)
         let b = ((rgbVal) & 0xFF)
@@ -216,9 +216,9 @@ namespace sgbotic {
     */
     //% subcategory=RGB-1602LCD
     //% group="core"
-    //% blockId="backlightColorRGB" block="backlight r|%r g|%g b|%b"
+    //% blockId="colourRGB" block="colour r|%r g|%g b|%b"
     //% weight=90 blockGap=20 color=#5DADE2
-    export function backlightColorRGB(r: number, g: number, b: number): void {
+    export function colourRGB(r: number, g: number, b: number): void {
         rgb(r, g, b);
     }
 
